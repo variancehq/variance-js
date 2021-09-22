@@ -1,2 +1,2 @@
 # js
-Integration Variance analytics into any web application
+Integrate Variance analytics into any web application
