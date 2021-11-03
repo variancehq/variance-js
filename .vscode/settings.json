@@ -1,0 +1,16 @@
+{
+  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.nodePath": ".yarn/sdks",
+  "eslint.validate": ["javascript", "typescript"],
+  "search.exclude": {
+    ".pnp.*": true,
+    "**/.pnp.*": true,
+    "**/.yarn": true,
+    "snippet.min.*": true
+  },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
+}

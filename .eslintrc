@@ -1,0 +1,52 @@
+{
+  "env": {
+    "es2020": true,
+    "node": true
+  },
+  "extends": [
+    // order matters as some override default configs
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": "tsconfig.json" },
+  "plugins": ["@typescript-eslint", "simple-import-sort", "sort-keys-fix"],
+  "settings": {
+    "import/extensions": [".ts"],
+    "import/resolver": { "typescript": { "project": "tsconfig.json" } },
+    "import/parsers": { "@typescript-eslint/parser": [".ts"] }
+  },
+  "rules": {
+    // https://eslint.org/docs/rules/
+    "curly": ["warn", "multi-line", "consistent"],
+    "dot-notation": "warn",
+    "eol-last": "warn",
+    "eqeqeq": "warn",
+    "no-await-in-loop": "error",
+    "no-dupe-class-members": "off", // handled by @typescript-eslint
+    "no-else-return": "warn",
+    "no-extra-bind": "warn",
+    "no-implicit-coercion": ["warn", { "allow": ["!!"] }],
+    "no-template-curly-in-string": "error",
+    "no-useless-computed-key": "warn",
+    "no-useless-rename": "warn",
+    "no-useless-return": "warn",
+    "no-var": "warn",
+    "nonblock-statement-body-position": "warn",
+    "object-shorthand": "warn",
+    "operator-assignment": "warn",
+    "prefer-const": "warn",
+    "prefer-template": "warn",
+    "radix": "error",
+    "yoda": "warn",
+
+    // https://www.npmjs.com/package/eslint-plugin-sort-keys-fix#usage
+    "sort-keys-fix/sort-keys-fix": ["warn", "asc", { "natural": true }],
+
+    // https://github.com/lydell/eslint-plugin-simple-import-sort#example-configuration
+    "simple-import-sort/exports": "warn",
+    "simple-import-sort/imports": "warn"
+  }
+}
