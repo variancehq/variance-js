@@ -1,6 +1,6 @@
 {
   "name": "@variancehq/variance-js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Integrate Variance analytics into any web application",
   "main": "dist/index.js",
   "type": "module",
