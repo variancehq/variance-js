@@ -1,0 +1,8 @@
+# sync .gitignore
+.yarn/*
+build/
+dist/
+tmp/
+
+# eslint
+.pnp.*

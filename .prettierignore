@@ -1,0 +1,13 @@
+# sync .gitignore
+.yarn/*
+build/
+dist/
+tmp/
+
+# prettier
+.pnp.cjs
+.pnp.loader.mjs
+.yarnrc.yml
+CHANGELOG.md
+snippet.min.html
+yarn.lock

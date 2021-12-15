@@ -1,0 +1,59 @@
+<script>
+  ;(function () {
+    // load existing @variancehq/variance-js or generate stub
+    var variance = (window.variance = window.variance || [])
+
+    // check that @variancehq/variance-js is already loaded
+    if (variance.load) return
+
+    // check for existing snippet
+    if (variance.invoked) {
+      console.error('Analytics.js loaded multiple times')
+      return
+    }
+    variance.invoked = true
+
+    // generate stubs that can be called while @variancehq/variance-js is loading
+    var methods = [
+      'addDestinationMiddleware',
+      'addIntegrationMiddleware',
+      'addSourceMiddleware',
+      'alias',
+      'debug',
+      'group',
+      'identify',
+      'load',
+      'off',
+      'on',
+      'once',
+      'page',
+      'pageview',
+      'ready',
+      'reset',
+      'setAnonymousId',
+      'track',
+      'trackClick',
+      'trackForm',
+      'trackLink',
+      'trackSubmit',
+    ]
+    for (var i = 0; i < methods.length; i++) {
+      var method = methods[i]
+      variance[method] = (function (methodName) {
+        return function () {
+          variance.push(
+            [methodName].concat(Array.prototype.slice.call(arguments))
+          )
+        }
+      })(method)
+    }
+
+    // generate your own at https://app.variance.com/integrations
+    // ex. variance.load("https://your-org.variance.com/webhook/variance_js/...");
+    variance.load('<YOUR WEBHOOK URL>')
+
+    // track current page
+    variance.page()
+  })()
+</script>
+<script async src="https://variancejs.variance.com/v1/variancejs.min.js" />

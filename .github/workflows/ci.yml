@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - 'v**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: ./.github/scripts/initBuildEnv.sh
+        env:
+          GCP_SA_KEY_DEV: ${{secrets.GCP_SA_KEY_DEV}}
+          GCP_SA_KEY_PROD: ${{secrets.GCP_SA_KEY_PROD}}
+          GCP_SA_KEY_STAGING: ${{secrets.GCP_SA_KEY_STAGING}}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          registry-url: https://registry.npmjs.org
+      - uses: google-github-actions/setup-gcloud@v0
+        with:
+          export_default_credentials: true
+          project_id: ${{ env.GCP_PROJECT_ID }}
+          service_account_key: ${{env.GCP_SERVICE_KEY}}
+      - run: yarn commitlint --from origin/main --to $GITHUB_SHA --verbose
+      - run: yarn style
+      - run: yarn lint
+      - run: yarn build
+      - run: |
+          echo $GCP_SERVICE_KEY | base64 -d | \
+          gcloud auth activate-service-account $GCP_SERVICE_ACCOUNT --key-file=-
+      - run: gsutil -m cp build/* gs://${GCP_BUCKET}/v1
+        if:
+          endsWith(github.ref, '/dev') || endsWith(github.ref, '/main') ||
+          startsWith(github.ref, 'refs/tags')
+      - run: yarn npm publish
+        if: startsWith(github.ref, 'refs/tags')
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
