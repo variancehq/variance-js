@@ -48,8 +48,5 @@
     "webpack-cli": "^4.9.1"
   },
   "packageManager": "yarn@3.1.1",
-  "publishConfig": {
-    "access": "public"
-  },
   "sideEffects": false
 }
