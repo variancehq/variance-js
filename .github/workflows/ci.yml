@@ -26,7 +26,7 @@ jobs:
       - id: 'auth'
         uses: 'google-github-actions/auth@v0'
         with:
-          credentials_json: '${{ secrets.GCP_SERVICE_KEY }}'
+          credentials_json: '${{ env.GCP_SERVICE_KEY }}'
       - uses: google-github-actions/setup-gcloud@v0
         with:
           project_id: ${{ env.GCP_PROJECT_ID }}
@@ -34,8 +34,9 @@ jobs:
       - run: yarn style
       - run: yarn lint
       - run: yarn build
-      - run: |
-          gcloud auth activate-service-account $GCP_SERVICE_ACCOUNT --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
+      - run:
+          gcloud auth login --brief --cred-file="${{
+          steps.auth.outputs.credentials_file_path }}"
       - run: gsutil -m cp build/* gs://${GCP_BUCKET}/v1
         if:
           endsWith(github.ref, '/dev') || endsWith(github.ref, '/main') ||
