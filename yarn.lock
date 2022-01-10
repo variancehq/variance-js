@@ -378,9 +378,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@segment/analytics-next@npm:^1.32.1":
-  version: 1.32.1
-  resolution: "@segment/analytics-next@npm:1.32.1"
+"@segment/analytics-next@npm:^1.33.1":
+  version: 1.33.1
+  resolution: "@segment/analytics-next@npm:1.33.1"
   dependencies:
     "@lukeed/uuid": ^2.0.0
     "@segment/analytics.js-video-plugins": ^0.2.1
@@ -388,9 +388,11 @@ __metadata:
     "@segment/tsub": ^0.1.9
     dset: ^3.0.0
     js-cookie: ^2.2.1
+    node-fetch: ^2.6.1
     spark-md5: ^3.0.1
+    tslib: ^2.1.0
     unfetch: ^4.1.0
-  checksum: eda6263107c14d48a900c3fe20ee6fd46b9f7ce6d22751d9299d1abbaf3ac112f10bfbefbcc8cef23bfc8145e017c8d838b5c83e3b766ed622f68bc9dea8f07c
+  checksum: b3853a6fa979942c7d6d84f77be42fdb6204f86732fc76d4e46aedf7e0ab843e107c2e4ce75db8f78138670d37caa67480dbe80d118824fa9b75bf19a635b5cc
   languageName: node
   linkType: hard
 
@@ -678,7 +680,7 @@ __metadata:
     "@commitlint/config-conventional": ^15.0.0
     "@rollup/plugin-replace": ^3.0.0
     "@rollup/plugin-typescript": ^8.3.0
-    "@segment/analytics-next": ^1.32.1
+    "@segment/analytics-next": ^1.33.1
     "@typescript-eslint/eslint-plugin": ^5.6.0
     "@typescript-eslint/parser": ^5.6.0
     clean-webpack-plugin: ^4.0.0
@@ -4172,6 +4174,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-fetch@npm:^2.6.1":
+  version: 2.6.6
+  resolution: "node-fetch@npm:2.6.6"
+  dependencies:
+    whatwg-url: ^5.0.0
+  checksum: ee8290626bdb73629c59722b75dcf4b9b6a67c1ed7eb9102e368479c4a13b56a48c2bb3ad71571e378e98c8b2c64c820e11f9cd39e4b8557dd138ad571ef9a42
+  languageName: node
+  linkType: hard
+
 "node-gyp@npm:latest":
   version: 8.4.0
   resolution: "node-gyp@npm:8.4.0"
@@ -5643,6 +5654,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tr46@npm:~0.0.3":
+  version: 0.0.3
+  resolution: "tr46@npm:0.0.3"
+  checksum: 726321c5eaf41b5002e17ffbd1fb7245999a073e8979085dacd47c4b4e8068ff5777142fc6726d6ca1fd2ff16921b48788b87225cbc57c72636f6efa8efbffe3
+  languageName: node
+  linkType: hard
+
 "trim-newlines@npm:^3.0.0":
   version: 3.0.1
   resolution: "trim-newlines@npm:3.0.1"
@@ -5705,7 +5723,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2, tslib@npm:^2.0.3, tslib@npm:^2.3.1":
+"tslib@npm:^2, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1":
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
@@ -5974,6 +5992,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"webidl-conversions@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "webidl-conversions@npm:3.0.1"
+  checksum: c92a0a6ab95314bde9c32e1d0a6dfac83b578f8fa5f21e675bc2706ed6981bc26b7eb7e6a1fab158e5ce4adf9caa4a0aee49a52505d4d13c7be545f15021b17c
+  languageName: node
+  linkType: hard
+
 "webpack-cli@npm:^4.9.1":
   version: 4.9.1
   resolution: "webpack-cli@npm:4.9.1"
@@ -6058,6 +6083,16 @@ __metadata:
   bin:
     webpack: bin/webpack.js
   checksum: 221ab8ccd440cb678269e86689704bbef81cf41393eb266625873e30c6980ffaa055bb1a7d14bf9fc0f5a2e6f03d15d068cbb995bc876757c01a4ca27fd2870c
+  languageName: node
+  linkType: hard
+
+"whatwg-url@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "whatwg-url@npm:5.0.0"
+  dependencies:
+    tr46: ~0.0.3
+    webidl-conversions: ^3.0.0
+  checksum: b8daed4ad3356cc4899048a15b2c143a9aed0dfae1f611ebd55073310c7b910f522ad75d727346ad64203d7e6c79ef25eafd465f4d12775ca44b90fa82ed9e2c
   languageName: node
   linkType: hard
 

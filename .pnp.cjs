@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@rollup/plugin-replace", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:3.0.0"],
             ["@rollup/plugin-typescript", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:8.3.0"],
-            ["@segment/analytics-next", "npm:1.32.1"],
+            ["@segment/analytics-next", "npm:1.33.1"],
             ["@typescript-eslint/eslint-plugin", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:5.6.0"],
             ["@typescript-eslint/parser", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:5.6.0"],
             ["clean-webpack-plugin", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:4.0.0"],
@@ -530,17 +530,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@segment/analytics-next", [
-        ["npm:1.32.1", {
-          "packageLocation": "./.yarn/cache/@segment-analytics-next-npm-1.32.1-6363632864-eda6263107.zip/node_modules/@segment/analytics-next/",
+        ["npm:1.33.1", {
+          "packageLocation": "./.yarn/cache/@segment-analytics-next-npm-1.33.1-3271eb1382-b3853a6fa9.zip/node_modules/@segment/analytics-next/",
           "packageDependencies": [
-            ["@segment/analytics-next", "npm:1.32.1"],
+            ["@segment/analytics-next", "npm:1.33.1"],
             ["@lukeed/uuid", "npm:2.0.0"],
             ["@segment/analytics.js-video-plugins", "npm:0.2.1"],
             ["@segment/facade", "npm:3.4.7"],
             ["@segment/tsub", "npm:0.1.9"],
             ["dset", "npm:3.1.1"],
             ["js-cookie", "npm:2.2.1"],
+            ["node-fetch", "npm:2.6.6"],
             ["spark-md5", "npm:3.0.2"],
+            ["tslib", "npm:2.3.1"],
             ["unfetch", "npm:4.2.0"]
           ],
           "linkType": "HARD",
@@ -936,7 +938,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@rollup/plugin-replace", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:3.0.0"],
             ["@rollup/plugin-typescript", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:8.3.0"],
-            ["@segment/analytics-next", "npm:1.32.1"],
+            ["@segment/analytics-next", "npm:1.33.1"],
             ["@typescript-eslint/eslint-plugin", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:5.6.0"],
             ["@typescript-eslint/parser", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:5.6.0"],
             ["clean-webpack-plugin", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:4.0.0"],
@@ -5022,6 +5024,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["node-fetch", [
+        ["npm:2.6.6", {
+          "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.6-056db6b778-ee8290626b.zip/node_modules/node-fetch/",
+          "packageDependencies": [
+            ["node-fetch", "npm:2.6.6"],
+            ["whatwg-url", "npm:5.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["node-gyp", [
         ["npm:8.4.0", {
           "packageLocation": "./.yarn/unplugged/node-gyp-npm-8.4.0-ee07b38f64/node_modules/node-gyp/",
@@ -6657,6 +6669,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["tr46", [
+        ["npm:0.0.3", {
+          "packageLocation": "./.yarn/cache/tr46-npm-0.0.3-de53018915-726321c5ea.zip/node_modules/tr46/",
+          "packageDependencies": [
+            ["tr46", "npm:0.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["trim-newlines", [
         ["npm:3.0.1", {
           "packageLocation": "./.yarn/cache/trim-newlines-npm-3.0.1-22f1f216de-b530f3fadf.zip/node_modules/trim-newlines/",
@@ -7045,6 +7066,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["webidl-conversions", [
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/webidl-conversions-npm-3.0.1-60310f6a2b-c92a0a6ab9.zip/node_modules/webidl-conversions/",
+          "packageDependencies": [
+            ["webidl-conversions", "npm:3.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["webpack", [
         ["npm:5.65.0", {
           "packageLocation": "./.yarn/cache/webpack-npm-5.65.0-da658c1b49-221ab8ccd4.zip/node_modules/webpack/",
@@ -7157,6 +7187,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/webpack-sources-npm-3.2.2-9b97404a4e-cc81f1f1bf.zip/node_modules/webpack-sources/",
           "packageDependencies": [
             ["webpack-sources", "npm:3.2.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["whatwg-url", [
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/whatwg-url-npm-5.0.0-374fb45e60-b8daed4ad3.zip/node_modules/whatwg-url/",
+          "packageDependencies": [
+            ["whatwg-url", "npm:5.0.0"],
+            ["tr46", "npm:0.0.3"],
+            ["webidl-conversions", "npm:3.0.1"]
           ],
           "linkType": "HARD",
         }]
