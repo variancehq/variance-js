@@ -9,5 +9,6 @@ tmp/
 .pnp.loader.mjs
 .yarnrc.yml
 CHANGELOG.md
+gha-creds-*.json
 snippet.min.html
 yarn.lock
