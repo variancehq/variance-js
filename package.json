@@ -38,6 +38,7 @@
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "html-minimizer-webpack-plugin": "^3.5.0",
     "husky": "^7.0.4",
+    "node-gyp": "^8.4.1",
     "prettier": "^2.5.1",
     "rollup": "^2.67.2",
     "standard-version": "^9.3.2",
