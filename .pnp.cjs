@@ -50,6 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-sort-keys-fix", "npm:1.1.2"],
             ["html-minimizer-webpack-plugin", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:3.5.0"],
             ["husky", "npm:7.0.4"],
+            ["node-gyp", "npm:8.4.1"],
             ["prettier", "npm:2.5.1"],
             ["rollup", "npm:2.67.2"],
             ["standard-version", "npm:9.3.2"],
@@ -1974,6 +1975,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-sort-keys-fix", "npm:1.1.2"],
             ["html-minimizer-webpack-plugin", "virtual:249f247e56598700a692fbb60b7eb03aee6a4f8d933988772172db9c42935b459b3e58484e2f1de3cf6d48707c25a2af95809741b77083544548f807064f8cef#npm:3.5.0"],
             ["husky", "npm:7.0.4"],
+            ["node-gyp", "npm:8.4.1"],
             ["prettier", "npm:2.5.1"],
             ["rollup", "npm:2.67.2"],
             ["standard-version", "npm:9.3.2"],
@@ -2531,6 +2533,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["aproba", "npm:1.2.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/aproba-npm-2.0.0-8716bcfde6-5615cadcfb.zip/node_modules/aproba/",
+          "packageDependencies": [
+            ["aproba", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["are-we-there-yet", [
@@ -2540,6 +2549,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["are-we-there-yet", "npm:1.1.7"],
             ["delegates", "npm:1.0.0"],
             ["readable-stream", "npm:2.3.7"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/are-we-there-yet-npm-3.0.0-1391430190-348edfdd93.zip/node_modules/are-we-there-yet/",
+          "packageDependencies": [
+            ["are-we-there-yet", "npm:3.0.0"],
+            ["delegates", "npm:1.0.0"],
+            ["readable-stream", "npm:3.6.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2917,6 +2935,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/color-name-npm-1.1.4-025792b0ea-b044585952.zip/node_modules/color-name/",
           "packageDependencies": [
             ["color-name", "npm:1.1.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["color-support", [
+        ["npm:1.1.3", {
+          "packageLocation": "./.yarn/cache/color-support-npm-1.1.3-3be5c53455-9b73568176.zip/node_modules/color-support/",
+          "packageDependencies": [
+            ["color-support", "npm:1.1.3"]
           ],
           "linkType": "HARD",
         }]
@@ -4277,6 +4304,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["signal-exit", "npm:3.0.5"],
             ["string-width", "npm:1.0.2"],
             ["strip-ansi", "npm:3.0.1"],
+            ["wide-align", "npm:1.1.5"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.0.1", {
+          "packageLocation": "./.yarn/cache/gauge-npm-4.0.1-c54e7ba970-398540c761.zip/node_modules/gauge/",
+          "packageDependencies": [
+            ["gauge", "npm:4.0.1"],
+            ["ansi-regex", "npm:5.0.1"],
+            ["aproba", "npm:2.0.0"],
+            ["color-support", "npm:1.1.3"],
+            ["console-control-strings", "npm:1.1.0"],
+            ["has-unicode", "npm:2.0.1"],
+            ["signal-exit", "npm:3.0.5"],
+            ["string-width", "npm:4.2.3"],
+            ["strip-ansi", "npm:6.0.1"],
             ["wide-align", "npm:1.1.5"]
           ],
           "linkType": "HARD",
@@ -5768,6 +5811,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["which", "npm:2.0.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:8.4.1", {
+          "packageLocation": "./.yarn/unplugged/node-gyp-npm-8.4.1-13c90a9c9b/node_modules/node-gyp/",
+          "packageDependencies": [
+            ["node-gyp", "npm:8.4.1"],
+            ["env-paths", "npm:2.2.1"],
+            ["glob", "npm:7.2.0"],
+            ["graceful-fs", "npm:4.2.8"],
+            ["make-fetch-happen", "npm:9.1.0"],
+            ["nopt", "npm:5.0.0"],
+            ["npmlog", "npm:6.0.1"],
+            ["rimraf", "npm:3.0.2"],
+            ["semver", "npm:7.3.5"],
+            ["tar", "npm:6.1.11"],
+            ["which", "npm:2.0.2"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["node-releases", [
@@ -5831,6 +5891,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["are-we-there-yet", "npm:1.1.7"],
             ["console-control-strings", "npm:1.1.0"],
             ["gauge", "npm:2.7.4"],
+            ["set-blocking", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/cache/npmlog-npm-6.0.1-f597f2e057-f1a4078a73.zip/node_modules/npmlog/",
+          "packageDependencies": [
+            ["npmlog", "npm:6.0.1"],
+            ["are-we-there-yet", "npm:3.0.0"],
+            ["console-control-strings", "npm:1.1.0"],
+            ["gauge", "npm:4.0.1"],
             ["set-blocking", "npm:2.0.0"]
           ],
           "linkType": "HARD",
