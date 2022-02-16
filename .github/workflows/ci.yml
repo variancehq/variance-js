@@ -22,6 +22,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16.x
+      - run: yarn install --immutable --immutable-cache
+      - run: yarn commitlint --from origin/main --to $GITHUB_SHA --verbose
+      - run: yarn style
+      - run: yarn lint
+      - run: yarn build
       - id: 'auth'
         uses: 'google-github-actions/auth@v0'
         with:
@@ -29,10 +34,6 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v0
         with:
           project_id: ${{ env.GCP_PROJECT_ID }}
-      - run: yarn commitlint --from origin/main --to $GITHUB_SHA --verbose
-      - run: yarn style
-      - run: yarn lint
-      - run: yarn build
       - run:
           gcloud auth login --brief --cred-file="${{
           steps.auth.outputs.credentials_file_path }}"
