@@ -17,7 +17,7 @@
     "lint": "eslint --ext=.ts --cache --cache-location=tmp/ . --max-warnings 0",
     "style": "prettier . --check",
     "release": "standard-version --sign",
-    "upload": "gsutil -m cp build/* gs://variancejs.variance.fyi/v1"
+    "upload": "gsutil -m cp -Z build/* gs://variancejs.variance.fyi/v1"
   },
   "peerDependencies": {
     "@segment/analytics-next": "^1.32.1"
