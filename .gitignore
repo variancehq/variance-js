@@ -1,9 +1,14 @@
 .yarn/*
+.vscode/*
 build/
 dist/
 tmp/
 
 # gitignore specific
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
 !.yarn/cache
 !.yarn/patches
 !.yarn/plugins
