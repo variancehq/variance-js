@@ -29,6 +29,13 @@
     "no-else-return": "warn",
     "no-extra-bind": "warn",
     "no-implicit-coercion": ["warn", { "allow": ["!!"] }],
+    "no-restricted-globals": [
+      "error",
+      {
+        "name": "console",
+        "message": "Use src/log instead."
+      }
+    ],
     "no-template-curly-in-string": "error",
     "no-useless-computed-key": "warn",
     "no-useless-rename": "warn",

@@ -4,6 +4,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { log } from './log'
 import { validateOpts } from './validateOpts'
 import { VarianceJs } from './VarianceJs'
 
@@ -16,13 +17,13 @@ declare global {
 async function load() {
   const stubs = window.variance
   if (!Array.isArray(stubs)) {
-    console.error('variance-js snippet was not property loaded')
+    log('error', 'Snippet was not property loaded')
     return
   }
 
   const loadStub = stubs.shift()
   if (!loadStub || loadStub[0] !== 'load') {
-    console.error('Variance.load must be called before first')
+    log('error', 'Variance.load must be called before first')
     return
   }
 

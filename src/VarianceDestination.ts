@@ -2,6 +2,9 @@ import type { Analytics, Context, Plugin } from '@segment/analytics-next'
 import { toFacade } from '@segment/analytics-next/dist/pkg/lib/to-facade.js'
 import { normalize } from '@segment/analytics-next/dist/pkg/plugins/segmentio/normalize.js'
 
+import { INTEGRATION_PAGE } from './constants'
+import { log } from './log'
+
 const ajxPrefix = /^ajs-next-/
 
 /** VarianceDestination compatible with @segment/analytics-next */
@@ -26,11 +29,17 @@ export function VarianceDestination(
 
     const data = normalize(analytics, json)
 
-    await fetch(webhookUrl, {
+    const response = await fetch(webhookUrl, {
       body: JSON.stringify(data),
       method: 'POST',
       mode: 'cors',
     })
+    if (response.status === 401) {
+      log(
+        'error',
+        `Please ensure that your Webhook URL and domain (${window.location.origin}) match your connection settings ${INTEGRATION_PAGE}`
+      )
+    }
     return ctx
   }
 
