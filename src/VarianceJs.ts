@@ -7,6 +7,8 @@ import { validateOpts } from './validateOpts'
 import { VarianceDestination } from './VarianceDestination'
 
 export class VarianceJs extends Analytics {
+  readonly isStub = false
+
   constructor() {
     const user = new User({
       cookie: { key: 'vjs_user_id', oldKey: '' },

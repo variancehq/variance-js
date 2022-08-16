@@ -8,12 +8,6 @@ import { log } from './log'
 import { validateOpts } from './validateOpts'
 import { VarianceJs } from './VarianceJs'
 
-declare global {
-  interface Window {
-    variance?: any[][] | VarianceJs
-  }
-}
-
 async function load() {
   const stubs = window.variance
   if (!Array.isArray(stubs)) {
