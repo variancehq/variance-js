@@ -2,7 +2,8 @@
   "name": "@variancehq/variance-js",
   "version": "0.0.3",
   "description": "Integrate Variance analytics into any web application",
-  "main": "dist/index.js",
+  "main": "./dist/cjs/index.cjs",
+  "types": "./dist/types/index.d.ts",
   "type": "module",
   "repository": "https://github.com/variancehq/variance-js.git",
   "license": "MIT",
@@ -12,8 +13,22 @@
     "snippet.html",
     "snippet.min.html"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    },
+    "./inject": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/inject.js",
+      "require": "./dist/cjs/inject.cjs"
+    },
+    "./snippet.html": "./snippet.html",
+    "./snippet.min.html": "./snippet.min.html"
+  },
   "scripts": {
-    "build": "rollup --config rollup.config.js && yarn webpack",
+    "build": "rollup --config rollup.config.ts --configPlugin typescript && yarn tsc --project tsconfig.types.json && yarn webpack",
     "lint": "eslint --ext=.ts --cache --cache-location=tmp/ . --max-warnings 0",
     "style": "prettier . --check",
     "release": "standard-version --sign",
@@ -49,5 +64,18 @@
     "webpack-cli": "4.10.0"
   },
   "packageManager": "yarn@3.2.2",
-  "sideEffects": false
+  "sideEffects": [
+    "dist/cjs/inject.cjs",
+    "dist/esm/inject.js"
+  ],
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types/index.d.ts"
+      ],
+      "inject": [
+        "./dist/types/inject.d.ts"
+      ]
+    }
+  }
 }

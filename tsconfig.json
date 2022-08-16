@@ -14,5 +14,5 @@
     "strict": true,
     "target": "ES2017"
   },
-  "include": ["src"]
+  "include": ["src", "rollup.config.ts"]
 }
