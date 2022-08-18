@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/variancehq/variance-js/compare/v0.1.0...v0.1.1) (2022-08-18)
+
+
+### Bug Fixes
+
+* tree shaking for esm modules ([a3c65ef](https://github.com/variancehq/variance-js/commit/a3c65ef5ed537ee04b4ca9dec53221d60e631818))
+
 ## [0.1.0](https://github.com/variancehq/variance-js/compare/v0.0.3...v0.1.0) (2022-08-16)
 
 
