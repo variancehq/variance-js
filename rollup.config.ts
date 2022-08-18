@@ -22,6 +22,7 @@ const config: RollupOptions = {
     {
       dir: 'dist/esm',
       format: 'es',
+      preserveModules: true,
       sourcemap: true,
       sourcemapExcludeSources: true,
     },
@@ -29,7 +30,6 @@ const config: RollupOptions = {
       dir: 'dist/cjs',
       entryFileNames: '[name].cjs',
       format: 'cjs',
-      preserveModules: true,
       sourcemap: true,
       sourcemapExcludeSources: true,
     },
