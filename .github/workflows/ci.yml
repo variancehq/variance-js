@@ -21,7 +21,7 @@ jobs:
           GCP_SA_KEY_STAGING: ${{secrets.GCP_SA_KEY_STAGING}}
       - uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: '18'
       - run: yarn install --immutable --immutable-cache
       - run: yarn commitlint --from origin/main --to $GITHUB_SHA --verbose
       - run: yarn style
